@@ -9,13 +9,14 @@ mongoose.connect(uri,{useNewUrlParser: true, useUnifiedTopology: true})
 const init = async () => {
 
   const server = Hapi.server({
+      port: 3101, 
       routes: {
         "cors": true
     }
   });
 
   
-  await server.register(require('hapi-heroku-helpers'),{
+  await server.register({
     plugin: require('hapi-mongodb'),
     options: {
       url: uri,
