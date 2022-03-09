@@ -22,6 +22,6 @@
     "mongodb": "^3.6.6",
     "mongodb-autoincrement": "^1.0.1",
     "mongoose": "^5.12.7",
-    "pg": "^8.6.0"
+    "pg": "^8.7.3"
   }
 }

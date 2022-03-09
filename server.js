@@ -1,6 +1,6 @@
 const Hapi = require('@hapi/hapi');
 const mongoose = require("mongoose");
-const uri = "mongodb://localhost:27017/StarWars"
+const uri = "mongodb+srv://soufian:cabella13@cluster0.ftaco.mongodb.net/StarWars?retryWrites=true&w=majority"
 
 
 mongoose.connect(uri,{useNewUrlParser: true, useUnifiedTopology: true})
@@ -9,13 +9,12 @@ mongoose.connect(uri,{useNewUrlParser: true, useUnifiedTopology: true})
 const init = async () => {
 
   const server = Hapi.server({
-      port: 4242,
-      host: "localhost",
       routes: {
         "cors": true
     }
   });
 
+  
   await server.register({
     plugin: require('hapi-mongodb'),
     options: {
@@ -56,13 +55,13 @@ const init = async () => {
           // Selec * from planets
           const planet = await request.mongo.db.collection('planets').find({ }).toArray()
           console.log(planet)
-           
           return planet;
-
           
         }
       
       })
+
+
 
       server.route({  
         method: 'GET',

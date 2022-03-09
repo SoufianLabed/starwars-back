@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const axios = require('axios')
-const uri = "mongodb://localhost:27017/StarWars"
+const uri = "mongodb+srv://soufian:cabella13@cluster0.ftaco.mongodb.net/StarWars?retryWrites=true&w=majority"
+
 
 
 
