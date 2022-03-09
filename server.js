@@ -10,7 +10,6 @@ const init = async () => {
 
   const server = Hapi.server({
       routes: {
-        "host": "https://back-starwars.herokuapp.com",
         "cors": true
     }
   });
