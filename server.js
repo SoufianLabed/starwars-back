@@ -15,7 +15,7 @@ const init = async () => {
   });
 
   
-  await server.register({
+  await server.register(require('hapi-heroku-helpers'),{
     plugin: require('hapi-mongodb'),
     options: {
       url: uri,
