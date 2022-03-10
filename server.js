@@ -1,7 +1,6 @@
 const Hapi = require('@hapi/hapi');
 const mongoose = require("mongoose");
-const uri = "mongodb+srv://soufian:cabella13@cluster0.ftaco.mongodb.net/StarWars?retryWrites=true&w=majority"
-
+const uri = process.env.urimongo
 
 mongoose.connect(uri,{useNewUrlParser: true, useUnifiedTopology: true})
 
