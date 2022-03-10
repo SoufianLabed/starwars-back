@@ -9,8 +9,6 @@ mongoose.connect(uri,{useNewUrlParser: true, useUnifiedTopology: true})
 const init = async () => {
 
   const server = Hapi.server({
-      host: "0.0.0.0",
-      port: 3101, 
       routes: {
         "cors": true
     }
